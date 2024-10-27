@@ -1,0 +1,43 @@
+/* frontend/src/FriendCard.css */
+.friend-card {
+    border: 2px solid #4CAF50; /* 緑の縁取り */
+    border-radius: 10px; /* 角を丸くする */
+    padding: 20px;
+    width: 300px;
+    background-color: white; /* 背景色を白に設定 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影を追加 */
+    position: fixed; /* 固定表示 */
+    top: 50%; /* 中央に配置 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100; /* 他の要素の上に表示 */
+  }
+  
+  .friend-name {
+    font-size: 24px; /* 名前のサイズを大きく */
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse; /* ボーダーの重なりを解消 */
+  }
+  
+  td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd; /* セルの下にボーダー */
+  }
+  
+  button {
+    background-color: #4CAF50; /* ボタンの色 */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* 角を丸くする */
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* ホバー時の色 */
+  }
+  
