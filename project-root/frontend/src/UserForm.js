@@ -13,6 +13,7 @@ function UserForm() {
   const [mbti, setMbti] = useState('');
   const [hobby, setHobby] = useState('');
   const [favoriteFood, setFavoriteFood] = useState('');
+  const [club, setClub] = useState('');
   const [friends, setFriends] = useState([]); // friendsの定義
   const [showCard, setShowCard] = useState(false);
   const [selectedFriend, setSelectedFriend] = useState(null);
@@ -35,6 +36,7 @@ function UserForm() {
         mbti,
         hobby,
         favoriteFood,
+        club,
       });
       console.log('ユーザーが作成されました:', response.data);
       socket.emit('join', response.data);
@@ -48,6 +50,7 @@ function UserForm() {
       setMbti('');
       setHobby('');
       setFavoriteFood('');
+      setClub('');
     } catch (error) {
       console.error('ユーザーの作成に失敗しました:', error);
     }
@@ -127,6 +130,15 @@ function UserForm() {
             <option value="その他">その他</option>
           </select>
         </li> 
+        <li>
+          <label>部活:</label>
+          <select value={club} onChange={(e) => setClub(e.target.value)} required>
+            <option value="">選択してください</option>
+            <option value="運動部">運動部</option>
+            <option value="文化部">文化部</option>
+            <option value="帰宅部">帰宅部</option>
+          </select>
+        </li>
         <button type="submit">送信</button>
       </form>
       <FriendList friends={friends} onShowCard={handleShowCard} />

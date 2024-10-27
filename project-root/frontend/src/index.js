@@ -1,10 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import ReactDOM from 'react-dom/client'; // 'react-dom/client'からインポート
+import App from './App'; // アプリケーションのメインコンポーネント
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+// root要素を取得
+const rootElement = document.getElementById('root');
+
+// createRootを使用してReactアプリケーションを描画
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );

@@ -24,6 +24,10 @@ const FriendCard = ({ friend, onClose }) => {
             <td>好きな食べ物</td>
             <td>{friend.favoriteFood}</td>
           </tr>
+          <tr>
+            <td>部活</td>
+            <td>{friend.club}</td>
+          </tr>
         </tbody>
       </table>
       <button onClick={onClose}>閉じる</button>

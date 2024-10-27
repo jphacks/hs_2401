@@ -17,6 +17,7 @@ function FriendList({ friends, onShowCard }) {
       const mbtiTypes = friends.map(friend => friend.mbti);
       const hobbys = friends.map(friend => friend.hobby);
       const favorFood = friends.map(friend => friend.favoriteFood);
+      const clubTypes = friends.map(friend => friend.club);
 
       // 出身地の共通項
       if (new Set(hometowns).size === 1) {
@@ -36,6 +37,11 @@ function FriendList({ friends, onShowCard }) {
       // 好きな食べ物の共通項
       if (new Set(favorFood).size === 1) {
         topics.push(`みんなの好きな食べ物: ${favorFood[0]}`);
+      }
+
+      // 部活の共通項
+      if (new Set(clubTypes).size === 1) {
+        topics.push(`みんなの部活: ${clubTypes[0]}`);
       }
 
       setCommonTopics(topics);
@@ -86,6 +92,7 @@ function FriendList({ friends, onShowCard }) {
           <p>MBTI: {selectedFriend.mbti}</p>
           <p>趣味: {selectedFriend.hobby}</p>
           <p>好きな食べ物: {selectedFriend.favoriteFood}</p>
+          <p>部活: {selectedFriend.club}</p>
           <button onClick={closePopup}>閉じる</button>
         </div>
       )}
