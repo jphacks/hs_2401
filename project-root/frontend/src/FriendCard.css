@@ -52,10 +52,12 @@ header {
 }
 
 .friend-image {
-  max-width: 100%; /* 親要素の幅に合わせて最大幅を設定 */
   height: auto; /* 高さは自動で調整して縦横比を維持 */
+  width: auto;
   border-radius: 10px; /* 角を丸くする */
   margin-bottom: 10px; /* 下に余白を追加 */
+  max-Width: 250px;
+  max-height: 250px;
 }
 
 .friend-name {
