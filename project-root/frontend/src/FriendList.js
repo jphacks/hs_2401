@@ -82,20 +82,7 @@ function FriendList({ friends, onShowCard }) {
         ))}
       </ul>
 
-      {selectedFriend && (
-        <div style={{
-          position: 'fixed', top: '20%', left: '50%', transform: 'translate(30%, -50%)',
-          backgroundColor: 'white', padding: '20px', border: '1px solid black', borderRadius: '5px'
-        }}>
-          <h3>{selectedFriend.name}の名刺</h3>
-          <p>出身地: {selectedFriend.hometown}</p>
-          <p>MBTI: {selectedFriend.mbti}</p>
-          <p>趣味: {selectedFriend.hobby}</p>
-          <p>好きな食べ物: {selectedFriend.favoriteFood}</p>
-          <p>部活: {selectedFriend.club}</p>
-          <button onClick={closePopup}>閉じる</button>
-        </div>
-      )}
+      
       {/* 共通の話題セクション */}
       <div>
         <h3>共通の話題</h3>

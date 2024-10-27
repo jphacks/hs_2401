@@ -69,13 +69,17 @@ function UserForm() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <li>
-          <label>名前:</label>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-        </li>
-        <li>
-          <label>出身地:</label>
-          <select value={hometown} onChange={(e) => setHometown(e.target.value)} required>
+        <table>
+          <tr>
+            <td><label>名前</label></td>
+            <td>
+              <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+            </td>
+          </tr>
+          <tr>
+            <td><label>出身地</label></td>
+            <td>
+            <select value={hometown} onChange={(e) => setHometown(e.target.value)} required>
             <option value="">選択してください</option>
             <option value="北海道">北海道</option>
             <option value="東北">東北</option>
@@ -87,10 +91,14 @@ function UserForm() {
             <option value="九州">九州</option>
             <option value="海外">海外</option>
           </select>
-        </li>
-        <li>
-          <label>MBTI:</label>
-          <select value={mbti} onChange={(e) => setMbti(e.target.value)} required>
+          </td>
+          </tr>
+          <tr>
+            <td>
+              <label>MBTI</label>
+            </td>
+            <td>
+            <select value={mbti} onChange={(e) => setMbti(e.target.value)} required>
             <option value="">選択してください</option>
             <option value="INTJ">INTJ:建築家</option>
             <option value="INTP">INTP:論理学者</option>
@@ -109,37 +117,51 @@ function UserForm() {
             <option value="ESTP">ESTP:起業家</option>
             <option value="ESFP">ESFP:エンターテイナー</option>
           </select>
-        </li>
-        <li>
-          <label>趣味:</label>
-          <select value={hobby} onChange={(e) => setHobby(e.target.value)} required>
-            <option value="">選択してください</option>
-            <option value="アウトドア">アウトドア</option>
-            <option value="インドア">インドア</option>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>趣味</label>
+            </td>
+            <td>
+              <select value={hobby} onChange={(e) => setHobby(e.target.value)} required>
+              <option value="">選択してください</option>
+              <option value="アウトドア">アウトドア</option>
+              <option value="インドア">インドア</option>
           </select>
-        </li>
-        <li>
-          <label>好きな食べ物:</label>
-          <select value={favoriteFood} onChange={(e) => setFavoriteFood(e.target.value)} required>
-            <option value="">選択してください</option>
-            <option value="ジンギスカン">ジンギスカン</option>
-            <option value="寿司">寿司</option>
-            <option value="お好み焼き">お好み焼き</option>
-            <option value="みかん">みかん</option>
-            <option value="神戸牛">神戸牛</option>
-            <option value="その他">その他</option>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>好きな食べ物</label>
+            </td>
+            <td>
+              <select value={favoriteFood} onChange={(e) => setFavoriteFood(e.target.value)} required>
+              <option value="">選択してください</option>
+              <option value="ジンギスカン">ジンギスカン</option>
+              <option value="寿司">寿司</option>
+              <option value="お好み焼き">お好み焼き</option>
+              <option value="みかん">みかん</option>
+              <option value="神戸牛">神戸牛</option>
+              <option value="その他">その他</option>
           </select>
-        </li> 
-        <li>
-          <label>部活:</label>
-          <select value={club} onChange={(e) => setClub(e.target.value)} required>
-            <option value="">選択してください</option>
-            <option value="運動部">運動部</option>
-            <option value="文化部">文化部</option>
-            <option value="帰宅部">帰宅部</option>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <label>部活</label>
+            </td>
+            <td>
+              <select value={club} onChange={(e) => setClub(e.target.value)} required>
+              <option value="">選択してください</option>
+              <option value="運動部">運動部</option>
+              <option value="文化部">文化部</option>
+              <option value="帰宅部">帰宅部</option>
           </select>
-        </li>
-        <button type="submit">送信</button>
+            </td>
+          </tr>
+        </table>
+        <button type="submit" style={{ textalign:'right'}}>送信</button>
       </form>
       <FriendList friends={friends} onShowCard={handleShowCard} />
       {showCard && selectedFriend && (
