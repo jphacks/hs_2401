@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import UserForm from './UserForm';
 import { io } from 'socket.io-client';
+import './FriendCard.css';
+
 
 // サーバーのURLを指定
 const socket = io('http://localhost:5000');
@@ -19,8 +21,8 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>会話促進アプリへようこそ</h1>
+    <div className="app-container" style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', height: '100vh', paddingLeft: '15%' }}>
+      <h1 style={{ width: '50%' }}>会話促進アプリへようこそ</h1>
       <UserForm addFriend={addFriend} />
     </div>
   );

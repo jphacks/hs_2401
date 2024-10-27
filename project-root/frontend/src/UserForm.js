@@ -66,11 +66,11 @@ function UserForm() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div>
+        <li>
           <label>名前:</label>
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-        </div>
-        <div>
+        </li>
+        <li>
           <label>出身地:</label>
           <select value={hometown} onChange={(e) => setHometown(e.target.value)} required>
             <option value="">選択してください</option>
@@ -84,8 +84,8 @@ function UserForm() {
             <option value="九州">九州</option>
             <option value="海外">海外</option>
           </select>
-        </div>
-        <div>
+        </li>
+        <li>
           <label>MBTI:</label>
           <select value={mbti} onChange={(e) => setMbti(e.target.value)} required>
             <option value="">選択してください</option>
@@ -106,16 +106,16 @@ function UserForm() {
             <option value="ESTP">ESTP:起業家</option>
             <option value="ESFP">ESFP:エンターテイナー</option>
           </select>
-        </div>
-        <div>
+        </li>
+        <li>
           <label>趣味:</label>
           <select value={hobby} onChange={(e) => setHobby(e.target.value)} required>
             <option value="">選択してください</option>
             <option value="アウトドア">アウトドア</option>
             <option value="インドア">インドア</option>
           </select>
-        </div>
-        <div>
+        </li>
+        <li>
           <label>好きな食べ物:</label>
           <select value={favoriteFood} onChange={(e) => setFavoriteFood(e.target.value)} required>
             <option value="">選択してください</option>
@@ -126,7 +126,7 @@ function UserForm() {
             <option value="神戸牛">神戸牛</option>
             <option value="その他">その他</option>
           </select>
-        </div>
+        </li> 
         <button type="submit">送信</button>
       </form>
       <FriendList friends={friends} onShowCard={handleShowCard} />

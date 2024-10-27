@@ -78,7 +78,7 @@ function FriendList({ friends, onShowCard }) {
 
       {selectedFriend && (
         <div style={{
-          position: 'fixed', top: '20%', left: '50%', transform: 'translate(-50%, -50%)',
+          position: 'fixed', top: '20%', left: '50%', transform: 'translate(30%, -50%)',
           backgroundColor: 'white', padding: '20px', border: '1px solid black', borderRadius: '5px'
         }}>
           <h3>{selectedFriend.name}の名刺</h3>
