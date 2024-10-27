@@ -32,18 +32,16 @@
 ### 活用した技術
 #### API・データ
 * REST API
-* 簡易データベース (リスト)
 * File Input API
 
 #### フレームワーク・ライブラリ・モジュール
 * React.js
-* Socket.io (クライアントおよびサーバー側)
+* Socket.io 
 * Axios
 * Python
 * Flask
 * Flask-CORS
 * Flask-SocketIO
-* CSS Modules / 自作CSSファイル
 * React Hooks (useState, useEffect)
 * Node.js
 * npm
