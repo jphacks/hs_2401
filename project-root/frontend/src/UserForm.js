@@ -119,9 +119,12 @@ function UserForm() {
           <label>好きな食べ物:</label>
           <select value={favoriteFood} onChange={(e) => setFavoriteFood(e.target.value)} required>
             <option value="">選択してください</option>
-            <option value="焼肉">焼肉</option>
+            <option value="ジンギスカン">ジンギスカン</option>
             <option value="寿司">寿司</option>
             <option value="お好み焼き">お好み焼き</option>
+            <option value="みかん">みかん</option>
+            <option value="神戸牛">神戸牛</option>
+            <option value="その他">その他</option>
           </select>
         </div>
         <button type="submit">送信</button>
