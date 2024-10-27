@@ -25,7 +25,8 @@ def create_user():
         'mbti': data.get('mbti', ''),
         'hobby': data.get('hobby',''),
         'favoriteFood':data.get('favoriteFood',''),
-        'club':data.get('club','')
+        'club':data.get('club',''),
+        'image': data.get('image',None)
     }
     users.append(user)
     return jsonify(user), 201

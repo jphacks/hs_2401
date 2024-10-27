@@ -22,7 +22,7 @@ header {
   align-items: center;
   justify-content: center;
   min-height: 100vh; /* 画面全体の高さを占める */
-  background-color: #f4f7fa; /* 背景色を設定 */
+  background-color: #ffffff; /* 背景色を設定 */
   padding: 20px;
 }
 
@@ -49,6 +49,13 @@ header {
   left: 50%;
   transform: translate(10%, -50%); /* 画面の中央に正確に配置 */
   z-index: 100; /* 他の要素の上に表示 */
+}
+
+.friend-image {
+  max-width: 100%; /* 親要素の幅に合わせて最大幅を設定 */
+  height: auto; /* 高さは自動で調整して縦横比を維持 */
+  border-radius: 10px; /* 角を丸くする */
+  margin-bottom: 10px; /* 下に余白を追加 */
 }
 
 .friend-name {

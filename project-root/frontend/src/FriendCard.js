@@ -6,6 +6,9 @@ const FriendCard = ({ friend, onClose }) => {
   return (
     <div className="friend-card">
       <h2 className="friend-name">{friend.name}</h2>
+      {friend.image && (
+        <img src={friend.image} alt={`${friend.name}'s profile`} className="friend-image" />
+      )}
       <table>
         <tbody>
           <tr>
